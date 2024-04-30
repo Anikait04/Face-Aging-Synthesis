@@ -2,12 +2,6 @@
 
 > The  task of age transformation illustrates the change of an individual's appearance over time. Accurately modeling this complex transformation over an input facial image is extremely challenging as it requires making convincing and possibly large changes to facial features and head shape, while still preserving the input identity. In this work, we present an image-to-image translation method that learns to directly encode real facial images into the latent space of a pre-trained unconditional GAN (e.g., StyleGAN) subject to a given aging shift. We employ a pre-trained age regression network used to explicitly guide the encoder to generate the latent codes corresponding to the desired age. In this formulation, our method approaches the continuous aging process as a regression task between the input age and desired target age, providing fine-grained control on the generated image. Moreover, unlike other approaches that operate solely in the latent space using a prior on the path controlling age, our method learns a more disentangled, non-linear path. We demonstrate that the end-to-end nature of our approach, coupled with the rich semantic latent space of StyleGAN, allows for further editing of the generated images. Qualitative and quantitative evaluations show the advantages of our method compared to state-of-the-art approaches.
 
-<a href="https://arxiv.org/abs/2102.02754"><img src="https://img.shields.io/badge/arXiv-2008.00951-b31b1b.svg" height=22.5></a>
-<a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" height=22.5></a>
-
-<a href="https://www.youtube.com/watch?v=zDTUbtmUbG8"><img src="https://img.shields.io/static/v1?label=Two Minute Papers&message=SAM Video&color=red" height=22.5></a>  
-<a href="https://youtu.be/X_pYC_LtBFw"><img src="https://img.shields.io/static/v1?label=SIGGRAPH 2021 &message=5 Minute Video&color=red" height=22.5></a>  
-<a href="https://replicate.ai/yuval-alaluf/sam"><img src="https://img.shields.io/static/v1?label=Replicate&message=Demo and Docker Image&color=darkgreen" height=22.5></a>
 
 
 Inference Notebook: &nbsp;<a href="http://colab.research.google.com/github/yuval-alaluf/SAM/blob/master/notebooks/inference_playground.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" height=22.5></a>  
@@ -277,54 +271,3 @@ guided inference except you do not need to specify the `--ref_images_paths_file`
 | &boxvr;&nbsp; utils | Folder with various utility functions
 | <img width=300> | <img>
 
-
-## Credits
-**StyleGAN2 model and implementation:**  
-https://github.com/rosinality/stylegan2-pytorch  
-Copyright (c) 2019 Kim Seonghyeon  
-License (MIT) https://github.com/rosinality/stylegan2-pytorch/blob/master/LICENSE  
-
-**IR-SE50 model and implementations:**  
-https://github.com/TreB1eN/InsightFace_Pytorch  
-Copyright (c) 2018 TreB1eN  
-License (MIT) https://github.com/TreB1eN/InsightFace_Pytorch/blob/master/LICENSE  
-
-**Ranger optimizer implementation:**  
-https://github.com/lessw2020/Ranger-Deep-Learning-Optimizer   
-License (Apache License 2.0) https://github.com/lessw2020/Ranger-Deep-Learning-Optimizer/blob/master/LICENSE  
-
-**LPIPS model and implementation:**  
-https://github.com/S-aiueo32/lpips-pytorch  
-Copyright (c) 2020, Sou Uchida  
-License (BSD 2-Clause) https://github.com/S-aiueo32/lpips-pytorch/blob/master/LICENSE  
-
-**DEX VGG model and implementation:**  
-https://github.com/InterDigitalInc/HRFAE  
-Copyright (c) 2020, InterDigital R&D France  
-https://github.com/InterDigitalInc/HRFAE/blob/master/LICENSE.txt
-
-**pSp model and implementation:**   
-https://github.com/eladrich/pixel2style2pixel  
-Copyright (c) 2020 Elad Richardson, Yuval Alaluf  
-https://github.com/eladrich/pixel2style2pixel/blob/master/LICENSE
-
-## Acknowledgments
-This code borrows heavily from [pixel2style2pixel](https://github.com/eladrich/pixel2style2pixel)
-
-## Citation
-If you use this code for your research, please cite our paper <a href="https://arxiv.org/abs/2102.02754">Only a Matter of Style: Age Transformation Using a Style-Based Regression Model</a>:
-
-```
-@article{alaluf2021matter,
-    author = {Alaluf, Yuval and Patashnik, Or and Cohen-Or, Daniel},
-    title = {Only a Matter of Style: Age Transformation Using a Style-Based Regression Model},
-    journal = {ACM Trans. Graph.},
-    issue_date = {August 2021},
-    volume = {40},
-    number = {4},
-    year = {2021},
-    articleno = {45},
-    publisher = {Association for Computing Machinery},
-    url = {https://doi.org/10.1145/3450626.3459805}
-}
-```
