@@ -250,24 +250,4 @@ Instead of performing style mixing using a reference image, you can perform styl
 w latent vectors by running the script `style_mixing.py`. This script works in a similar manner to the reference
 guided inference except you do not need to specify the `--ref_images_paths_file` flag.
 
-## Repository structure
-| Path | Description <img width=200>
-| :--- | :---
-| SAM | Repository root folder
-| &boxvr;&nbsp; configs | Folder containing configs defining model/data paths and data transforms
-| &boxvr;&nbsp; criteria | Folder containing various loss criterias for training
-| &boxvr;&nbsp; datasets | Folder with various dataset objects and augmentations
-| &boxvr;&nbsp; docs | Folder containing images displayed in the README
-| &boxvr;&nbsp; environment | Folder containing Anaconda environment used in our experiments
-| &boxvr; models | Folder containing all the models and training objects
-| &boxv;&nbsp; &boxvr;&nbsp; encoders | Folder containing various architecture implementations
-| &boxv;&nbsp; &boxvr;&nbsp; stylegan2 | StyleGAN2 model from [rosinality](https://github.com/rosinality/stylegan2-pytorch)
-| &boxv;&nbsp; &boxvr;&nbsp; psp.py | Implementation of pSp encoder
-| &boxv;&nbsp; &boxur;&nbsp; dex_vgg.py | Implementation of DEX VGG classifier used in computation of aging loss
-| &boxvr;&nbsp; notebook | Folder with jupyter notebook containing SAM inference playground
-| &boxvr;&nbsp; options | Folder with training and test command-line options
-| &boxvr;&nbsp; scripts | Folder with running scripts for training and inference
-| &boxvr;&nbsp; training | Folder with main training logic and Ranger implementation from [lessw2020](https://github.com/lessw2020/Ranger-Deep-Learning-Optimizer)
-| &boxvr;&nbsp; utils | Folder with various utility functions
-| <img width=300> | <img>
 
